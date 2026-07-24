@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title || 'Web Scraper Dashboard' %></title>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+    <% if (typeof error !== 'undefined') { %>
+        <!-- 404 Error State -->
+        <div class="error-page">
+            <div class="glass p-8 text-center">
+                <h1 class="text-danger text-4xl mb-4"><i class="fas fa-exclamation-triangle"></i> <%= title %></h1>
+                <p class="text-muted mb-6"><%= error %></p>
+                <a href="/" class="btn btn-primary">Go to Home</a>
+            </div>
+        </div>
+    <% } else { %>
+    
+    <!-- Navbar -->
+    <nav class="navbar glass sticky">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-spider text-primary"></i>
+                <span class="font-bold">ScraperDash Enterprise</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="active" id="navHome">Home</a></li>
+                <li><a href="#" id="navBookmarks">Bookmarks <span id="bookmarkCount" class="badge badge-success">0</span></a></li>
+
+            </ul>
+            <div class="nav-actions">
+                <button id="themeToggle" class="btn-icon" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Hero Section -->
+        <header class="hero glass fade-in">
+            <div class="hero-content">
+                <h1 class="hero-title">Intelligent Web Scraper V2</h1>
+                <p class="hero-subtitle">Enterprise-grade scraping with deep pagination, predictive caching, and interactive data visualization.</p>
+                
+                <div class="scraper-controls form-row align-center">
+                    <div class="form-group flex-1">
+                        <select id="targetSelect" class="form-control" aria-label="Select Target Website">
+                            <option value="books">Books to Scrape (E-commerce)</option>
+                            <option value="quotes">Quotes to Scrape (Text/Authors)</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="width: 120px;">
+                        <input type="number" id="pagesInput" class="form-control" value="1" min="1" max="10" placeholder="Pages">
+                    </div>
+                    <button id="fetchDataBtn" class="btn btn-primary">
+                        <i class="fas fa-bolt"></i> Scrape Deep
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="dashboard-section mt-8">
+            
+            <!-- Statistics Dashboard -->
+            <div class="stats-grid slide-up" id="statsGrid">
+                <div class="stat-card glass">
+                    <div class="stat-icon bg-primary-light text-primary">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Total Items</h3>
+                        <p id="statTotal">0</p>
+                    </div>
+                </div>
+                <div class="stat-card glass">
+                    <div class="stat-icon bg-success-light text-success">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Average Price</h3>
+                        <p id="statAvgPrice">£0.00</p>
+                    </div>
+                </div>
+                <div class="stat-card glass">
+                    <div class="stat-icon bg-accent-light text-accent">
+                        <i class="fas fa-arrow-up"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Highest Price</h3>
+                        <p id="statHighPrice">£0.00</p>
+                    </div>
+                </div>
+                <div class="stat-card glass">
+                    <div class="stat-icon bg-warning-light text-warning">
+                        <i class="fas fa-box-open"></i>
+                        <div class="stat-card glass flex-1 text-center slide-up" style="animation-delay: 0.3s">
+                    <i class="fas fa-language text-accent text-3xl mb-2"></i>
+                    <h3 class="text-xl font-bold" id="statTranslations">0</h3>
+                    <p class="text-sm text-muted">Translations</p>
+                </div>
+            </div>
+                    <div class="stat-info">
+                        <h3>In Stock</h3>
+                        <p id="statInStock">0</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Visualization Chart -->
+            <div class="chart-container glass mt-6 p-4 hidden" id="chartWrapper">
+                <canvas id="statsChart" style="max-height: 250px;"></canvas>
+            </div>
+
+            <!-- Toolbar (Search, Filter, Sort, Export) -->
+            <div class="toolbar glass mt-6 slide-up">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Fuzzy Search (Title/Author)...">
+                    <i class="fas fa-microphone" title="Voice Search (Coming Soon)" style="left: auto; right: 1rem; cursor: pointer;"></i>
+                </div>
+                <div class="filter-group">
+                    <select id="sortSelect" class="form-control">
+                        <option value="default">Sort By</option>
+                        <option value="az">A-Z</option>
+                        <option value="za">Z-A</option>
+                        <option value="priceLowHigh">Price: Low to High</option>
+                        <option value="priceHighLow">Price: High to Low</option>
+                    </select>
+                    <select id="filterAvailability" class="form-control">
+                        <option value="all">Availability</option>
+                        <option value="in stock">In Stock</option>
+                        <option value="out of stock">Out of Stock</option>
+                    </select>
+                    <select id="filterSentiment" class="form-control">
+                        <option value="all">All Sentiment</option>
+                        <option value="Very Positive">Very Positive</option>
+                        <option value="Positive">Positive</option>
+                        <option value="Neutral">Neutral</option>
+                        <option value="Negative">Negative</option>
+                        <option value="Very Negative">Very Negative</option>
+                    </select>
+                </div>
+                <div class="action-group">
+                    <button id="viewToggleBtn" class="btn-icon" title="Toggle Grid/List">
+                        <i class="fas fa-th-list"></i>
+                    </button>
+                    <button id="exportExcelBtn" class="btn btn-outline" title="Export Excel">
+                        <i class="fas fa-file-excel text-success"></i> Excel
+                    </button>
+                    <button id="exportCsvBtn" class="btn btn-outline" title="Export CSV">
+                        <i class="fas fa-file-csv"></i> CSV
+                    </button>
+                </div>
+            </div>
+
+            <!-- Data Display Area -->
+            <div id="dataContainer" class="data-grid mt-6">
+                <!-- Empty State (Default) -->
+                <div class="empty-state glass text-center p-10">
+                    <i class="fas fa-robot text-6xl text-muted mb-4"></i>
+                    <h2 class="text-2xl font-bold mb-2">Ready to Scrape</h2>
+                    <p class="text-muted">Select a target website and click "Fetch Data" to begin.</p>
+                </div>
+            </div>
+
+            <!-- Loader Template (Hidden) -->
+            <template id="loaderTemplate">
+                <div class="loader-container glass text-center p-10">
+                    <div class="spinner"></div>
+                    <p class="mt-4 text-muted">Scraping data in real-time...</p>
+                </div>
+            </template>
+
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer glass mt-12">
+        <div class="container flex justify-between align-center">
+            <p>&copy; <%= year %> Task 6-Web Scraping. All rights reserved.</p>
+
+        </div>
+    </footer>
+
+    <!-- Toast Notifications -->
+    <div id="toastContainer" class="toast-container"></div>
+
+    <% } %>
+
+    <!-- Scripts -->
+    <script type="module" src="/js/app.js"></script>
+</body>
+</html>
