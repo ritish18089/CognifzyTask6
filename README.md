@@ -1,9 +1,9 @@
 # Web Scraping Application
 
-## Overview
+## 📖 Overview
 Web Scraping is a modern web scraping application built using Node.js, Express.js, Axios, Cheerio, HTML, CSS, and JavaScript. The application automatically extracts publicly available information from Books to Scrape and Quotes to Scrape, then displays the collected data in a clean, responsive, and user-friendly dashboard.
 
-## Features
+## ✨ Features
 - **Dynamic Web Scraping:** Extracts data in real-time using Axios and Cheerio.
 - **Glassmorphism UI:** Modern, responsive, card-based interface with hover animations.
 - **Advanced Controls:** Search by title/author, sort (A-Z, Price), filter by availability.
@@ -11,7 +11,7 @@ Web Scraping is a modern web scraping application built using Node.js, Express.j
 - **Dark Mode Support:** Seamless toggling between light and dark themes using CSS variables and local storage.
 - **Statistics Dashboard:** Auto-calculates total items, average price, highest price, and stock levels.
 
-## Technology Stack
+## 🛠️ Technology Stack
 ### Frontend
 - HTML5
 - CSS3
@@ -40,7 +40,7 @@ Web Scraping is a modern web scraping application built using Node.js, Express.j
 - Books to Scrape
 - Quotes to Scrape
 
-## Architecture & Workflow
+## 📂 Architecture & Workflow
 <img src="https://github.com/ritish18089/CognifzyTask6/blob/main/Webscraptask6.png" width="1000px" height="1000px">
 
 ## 📌 Functional Modules
@@ -104,35 +104,35 @@ Web Scraping is a modern web scraping application built using Node.js, Express.j
 - Loading indicators.
 - Smooth animations and transitions.
 
-## Screenshots
-### Dashboard
+## 📸 Screenshots
+### 🏠 Dashboard
 <p align="center"><img src="https://github.com/ritish18089/CognifzyTask6/blob/main/1.png" height="1000px"></p>
 
-### Books Section
+### 📚 Books Section
 <p align="center"><img src="https://github.com/ritish18089/CognifzyTask6/blob/main/2.png" height="1000px"></p>
 
-### Quotes Section
+### 💬 Quotes Section
 <p align="center"><img src="https://github.com/ritish18089/CognifzyTask6/blob/main/3.png" height="1000px"></p>
 
-### Search Function
+### 🔍 Search Function
 <p align="center"><img src="https://github.com/ritish18089/CognifzyTask6/blob/main/4.png" height="1000px"></p>
 
-### Filter Function
+### 🗂️ Filter Function
 <p align="center"><img src="https://github.com/ritish18089/CognifzyTask6/blob/main/5.png" height="1000px"></p>
 
-### Export Feature
+### 📤 Export Feature
 <p align="center"><img src="https://github.com/ritish18089/CognifzyTask6/blob/main/6.png" height="1000px"></p>
 
-### Statistics
+### 📊 Statistics
 <p align="center"><img src="https://github.com/ritish18089/CognifzyTask6/blob/main/7.png" height="1000px"></p>
 
-### AI Translation in Spanish
+### 🤖 AI Translation in Spanish
 <p align="center"><img src="https://github.com/ritish18089/CognifzyTask6/blob/main/8.png" height="1000px"></p>
 
-### Bookmark
+### 📚 Bookmark
 <p align="center"><img src="https://github.com/ritish18089/CognifzyTask6/blob/main/9.png" height="1000px"></p>
 
-### Responsive Mobile View
+### 📱 Responsive Mobile View
 <p align="center"><img src="https://github.com/ritish18089/CognifzyTask6/blob/main/10.png" height="1000px"></p>
 
 ## 📚 Learning Outcomes
@@ -141,7 +141,7 @@ Web Scraping is a modern web scraping application built using Node.js, Express.j
 - Managing application state cleanly in Vanilla JavaScript without heavy frameworks.
 - Building elegant, highly-responsive grid layouts and dynamic UI rendering.
 
-## Installation Steps
+## ⚙ Installation Steps
 - Ensure Node.js (v18 or later) and npm (Node Package Manager) are installed on your system.- 
 - Clone or download this repository to your local machine.
 - Navigate to the Task 6-Web Scraping project directory.
@@ -176,3 +176,25 @@ npm run dev
 http://localhost:3000
 ```
 
+### IDE (VS Code, WebStorm, Sublime Text)
+- Open the Task 6-Web Scraping project folder in your preferred code editor.
+- Open the integrated terminal and install the required dependencies by running npm install.
+- Start the application using npm start or npm run dev (if using Nodemon).
+- Open your web browser and navigate to http://localhost:3000.
+- Select either the Books or Quotes section and click Scrape Data to fetch the latest information.
+- Use the Search, Filter, and Sort options to browse the scraped data.
+- Export the scraped data in JSON or CSV format if required.
+- Switch between Light and Dark themes for a better user experience.
+
+## 🔮 Future Enhancements
+- Add support for scraping additional websites (News, Sports, and Job Portals).
+- Integrate AI-powered content summarization and sentiment analysis.
+- Store scraped data in a database (MongoDB/MySQL) for persistent storage.
+- Implement an advanced analytics dashboard with interactive charts.
+- Add user authentication, bookmarks, and personalized scraping history.
+- Enable cloud deployment and scheduled automatic web scraping.
+
+## Project Done By:
+Author: Ritish Kannur
+Internship: Software Development
+Project: Web Scraping
