@@ -106,34 +106,34 @@ Web Scraping is a modern web scraping application built using Node.js, Express.j
 
 ## Screenshots
 ### Dashboard
-<p align="center"><img src="" height="1000px"></p>
+<p align="center"><img src="https://github.com/ritish18089/CognifzyTask6/blob/main/1.png" height="1000px"></p>
 
 ### Books Section
-<p align="center"><img src="" height="1000px"></p>
+<p align="center"><img src="https://github.com/ritish18089/CognifzyTask6/blob/main/2.png" height="1000px"></p>
 
 ### Quotes Section
-<p align="center"><img src="" height="1000px"></p>
+<p align="center"><img src="https://github.com/ritish18089/CognifzyTask6/blob/main/3.png" height="1000px"></p>
 
 ### Search Function
-<p align="center"><img src="" height="1000px"></p>
+<p align="center"><img src="https://github.com/ritish18089/CognifzyTask6/blob/main/4.png" height="1000px"></p>
 
 ### Filter Function
-<p align="center"><img src="" height="1000px"></p>
+<p align="center"><img src="https://github.com/ritish18089/CognifzyTask6/blob/main/5.png" height="1000px"></p>
 
 ### Export Feature
-<p align="center"><img src="" height="1000px"></p>
+<p align="center"><img src="https://github.com/ritish18089/CognifzyTask6/blob/main/6.png" height="1000px"></p>
 
 ### Statistics
-<p align="center"><img src="" height="1000px"></p>
+<p align="center"><img src="https://github.com/ritish18089/CognifzyTask6/blob/main/7.png" height="1000px"></p>
 
 ### AI Translation in Spanish
-<p align="center"><img src="" height="1000px"></p>
+<p align="center"><img src="https://github.com/ritish18089/CognifzyTask6/blob/main/8.png" height="1000px"></p>
 
 ### Bookmark
-<p align="center"><img src="" height="1000px"></p>
+<p align="center"><img src="https://github.com/ritish18089/CognifzyTask6/blob/main/9.png" height="1000px"></p>
 
 ### Responsive Mobile View
-<p align="center"><img src="" height="1000px"></p>
+<p align="center"><img src="https://github.com/ritish18089/CognifzyTask6/blob/main/10.png" height="1000px"></p>
 
 ## Learning Outcomes
 - Advanced DOM traversal using Cheerio to extract nested elements.
