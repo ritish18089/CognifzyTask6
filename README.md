@@ -104,6 +104,37 @@ Web Scraping is a modern web scraping application built using Node.js, Express.j
 - Loading indicators.
 - Smooth animations and transitions.
 
+## Screenshots
+### Dashboard
+<p align="center"><img src="" height="1000px"></p>
+
+### Books Section
+<p align="center"><img src="" height="1000px"></p>
+
+### Quotes Section
+<p align="center"><img src="" height="1000px"></p>
+
+### Search Function
+<p align="center"><img src="" height="1000px"></p>
+
+### Filter Function
+<p align="center"><img src="" height="1000px"></p>
+
+### Export Feature
+<p align="center"><img src="" height="1000px"></p>
+
+### Statistics
+<p align="center"><img src="" height="1000px"></p>
+
+### AI Translation in Spanish
+<p align="center"><img src="" height="1000px"></p>
+
+### Bookmark
+<p align="center"><img src="" height="1000px"></p>
+
+### Responsive Mobile View
+<p align="center"><img src="" height="1000px"></p>
+
 ## Learning Outcomes
 - Advanced DOM traversal using Cheerio to extract nested elements.
 - Robust error handling for asynchronous API calls and network timeouts.
