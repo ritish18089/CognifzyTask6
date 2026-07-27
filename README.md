@@ -1,4 +1,4 @@
-# Web Scraping Application
+# Web Scraping Application - 💫 Feature Showcase
 
 ## 📖 Overview
 Web Scraping is a modern web scraping application built using Node.js, Express.js, Axios, Cheerio, HTML, CSS, and JavaScript. The application automatically extracts publicly available information from Books to Scrape and Quotes to Scrape, then displays the collected data in a clean, responsive, and user-friendly dashboard.
