@@ -195,6 +195,6 @@ http://localhost:3000
 - Enable cloud deployment and scheduled automatic web scraping.
 
 ## Project Done By:
-Author: Ritish Kannur
-Internship: Software Development
-Project: Web Scraping
+**Author:** Ritish Kannur  
+**Internship:** Software Development  
+**Project:** Task Master
