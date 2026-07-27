@@ -43,7 +43,66 @@ Web Scraping is a modern web scraping application built using Node.js, Express.j
 ## Architecture & Workflow
 <img src="" width="1000px" height="1000px">
 
+## 📌 Functional Modules
+### Dashboard Module
+- Displays an overview of the application.
+- Shows total books and quotes scraped.
+- Displays recent scraping activity.
+- Provides quick navigation to all modules.
+- Shows basic statistics and summary cards.
 
+### Books Scraping Module
+- Fetches book data from the Books to Scrape website.
+- Extracts book title, price, rating, availability, and cover image.
+- Displays books in responsive cards.
+- Supports searching and filtering books.
+- Allows sorting by price and rating.
+
+### Quotes Scraping Module
+- Fetches quotes from the Quotes to Scrape website.
+- Extracts quote text, author, and tags.
+- Displays quotes in a clean card layout.
+- Supports search by quote, author, or tag.
+- Allows filtering and sorting of quotes.
+
+### Search & Filter Module
+- Provides real-time search functionality.
+- Filters scraped data based on keywords.
+- Supports category-based filtering.
+- Sorts data alphabetically or by attributes.
+- Resets filters to default.
+
+### Statistics Module
+- Displays total books scraped.
+- Displays total quotes scraped.
+- Shows scraping statistics.
+- Presents summary cards for quick insights.
+
+### Export Module
+- Exports scraped data as JSON.
+- Exports scraped data as CSV.
+- Downloads exported files.
+- Preserves structured data format.
+
+### Theme Management Module
+- Supports Light Mode.
+- Supports Dark Mode.
+- Saves user theme preference.
+- Updates the UI dynamically.
+
+### Error Handling Module
+- Handles invalid website responses.
+- Displays network error messages.
+- Handles empty scraping results.
+- Shows loading and retry states.
+- Prevents application crashes.
+
+### User Interface Module
+- Responsive design for all devices.
+- Interactive dashboard layout.
+- Card-based data presentation.
+- Loading indicators.
+- Smooth animations and transitions.
 
 ## Learning Outcomes
 - Advanced DOM traversal using Cheerio to extract nested elements.
