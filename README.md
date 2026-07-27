@@ -135,10 +135,44 @@ Web Scraping is a modern web scraping application built using Node.js, Express.j
 ### Responsive Mobile View
 <p align="center"><img src="https://github.com/ritish18089/CognifzyTask6/blob/main/10.png" height="1000px"></p>
 
-## Learning Outcomes
+## 📚 Learning Outcomes
 - Advanced DOM traversal using Cheerio to extract nested elements.
 - Robust error handling for asynchronous API calls and network timeouts.
 - Managing application state cleanly in Vanilla JavaScript without heavy frameworks.
 - Building elegant, highly-responsive grid layouts and dynamic UI rendering.
 
+## Installation Steps
+- Ensure Node.js (v18 or later) and npm (Node Package Manager) are installed on your system.- 
+- Clone or download this repository to your local machine.
+- Navigate to the Task 6-Web Scraping project directory.
+- Open the project in your preferred code editor (e.g., Visual Studio Code).
+- Open a terminal in the project directory and install all required dependencies.
+
+## 📂 How to Run
+### Command Line
+1. Open your Terminal or Command Prompt.
+2. Navigate to the project directory:
+ ```bash
+cd "Task 6-Web Scraping"
+```
+3. (Optional) If you have Visual Studio Code installed, open the project:
+ ```bash
+code .
+```
+4. Install all required project dependencies:
+ ```bash
+npm install
+```
+5. Start the Node.js server:
+ ```bash
+npm start
+```
+or, if you're using Nodemon for development:
+```bash
+npm run dev
+```
+6. Open your web browser and visit:
+```bash
+http://localhost:3000
+```
 
