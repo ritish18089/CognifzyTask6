@@ -41,7 +41,7 @@ Web Scraping is a modern web scraping application built using Node.js, Express.j
 - Quotes to Scrape
 
 ## Architecture & Workflow
-<img src="" width="1000px" height="1000px">
+<img src="https://github.com/ritish18089/CognifzyTask6/blob/main/Webscraptask6.png" width="1000px" height="1000px">
 
 ## 📌 Functional Modules
 ### Dashboard Module
