@@ -1,6 +1,7 @@
-# Task 6: Web Scraping Application
+# Web Scraping Application
 
-A robust, interactive, full-stack web scraping dashboard built with Node.js, Express, Axios, Cheerio, and modern Vanilla JavaScript.
+## Overview
+Web Scraping is a modern web scraping application built using Node.js, Express.js, Axios, Cheerio, HTML, CSS, and JavaScript. The application automatically extracts publicly available information from Books to Scrape and Quotes to Scrape, then displays the collected data in a clean, responsive, and user-friendly dashboard.
 
 ## Features
 - **Dynamic Web Scraping:** Extracts data in real-time using Axios and Cheerio.
@@ -11,37 +12,38 @@ A robust, interactive, full-stack web scraping dashboard built with Node.js, Exp
 - **Statistics Dashboard:** Auto-calculates total items, average price, highest price, and stock levels.
 
 ## Technology Stack
-- **Backend:** Node.js, Express.js
-- **Scraping:** Axios, Cheerio
-- **Templating:** EJS (Embedded JavaScript templates)
-- **Frontend:** HTML5, CSS3, ES6 JavaScript
+### Frontend
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- EJS
 
-## Folder Structure
-```
-Task 6-Web Scraping/
-├── public/
-│   ├── css/ (style.css, responsive.css)
-│   ├── js/  (app.js, search.js, ui.js, export.js)
-│   └── images/
-├── routes/
-│   └── scraper.js
-├── services/
-│   └── scraperService.js
-├── utils/
-│   ├── parser.js
-│   └── helpers.js
-├── views/
-│   └── index.ejs
-├── server.js
-├── package.json
-└── README.md
-```
+### Backend
+- Node.js
+- Express.js
 
-## Installation & How to Run
-1. Navigate into the directory: `cd "Task 6-Web Scraping"`
-2. Install dependencies: `npm install`
-3. Run the application: `npm run dev` (uses nodemon) or `node server.js`
-4. Open your browser and navigate to `http://localhost:3000`
+### Libraries
+- Axios
+- Cheerio
+- Express
+- Dotenv
+- Nodemon
+
+### Development Tools
+- Visual Studio Code
+- Git
+- GitHub
+- npm
+- Chrome Developer Tools
+
+### Websites Scraped
+- Books to Scrape
+- Quotes to Scrape
+
+## Architecture & Workflow
+<img src="" width="1000px" height="1000px">
+
+
 
 ## Learning Outcomes
 - Advanced DOM traversal using Cheerio to extract nested elements.
@@ -49,5 +51,4 @@ Task 6-Web Scraping/
 - Managing application state cleanly in Vanilla JavaScript without heavy frameworks.
 - Building elegant, highly-responsive grid layouts and dynamic UI rendering.
 
-## License
-ISC
+
